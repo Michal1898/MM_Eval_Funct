@@ -19,11 +19,16 @@ def eval_attempt(secret_code="00000", inserted_code="00000"):
             white_stick += 1
             secret_rest.remove(compared_digit)
 
-    # print(passed_digits, secret_rest, inserted_rest, black_stick, white_stick)
-    # print(100 * "-")
+    return black_stick, white_stick
 
 
-eval_attempt("654321", "123456")
-eval_attempt("123456", "123456")
-eval_attempt("445123", "451433")
-eval_attempt("2222", "4444")
+hit, color = eval_attempt("654321", "123456")
+print(f"Cernych: {hit} , Bilych: {color}")
+hit, color = eval_attempt("123456", "123456")
+print(f"Cernych: {hit} , Bilych: {color}")
+hit, color = eval_attempt("445123", "451433")
+print(f"Cernych: {hit} , Bilych: {color}")
+hit, color = eval_attempt("2222", "4444")
+print(f"Cernych: {hit} , Bilych: {color}")
+hit, color = eval_attempt("12345", "54321")
+print(f"Cernych: {hit} , Bilych: {color}")
